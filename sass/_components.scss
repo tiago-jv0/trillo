@@ -127,7 +127,7 @@
     &__item {
         position: relative;
 
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-bottom: 0.5rem;
         }
 
@@ -141,17 +141,17 @@
             background-color: var(--color-primary);
             transform: scaleY(0);
             transform-origin: center;
-            transition: transform 0.3s, width 0.4s cubic-bezier(1,0,0,1) 0.2s , background-color 0.1s;
+            transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
         }
 
         &:hover::before,
-        &--active::before{
+        &--active::before {
             transform: scaleY(1);
             width: 100%;
         }
 
-        &:active::before{
-            background-color: var(--color-primary-light)
+        &:active::before {
+            background-color: var(--color-primary-light);
         }
     }
 
@@ -185,4 +185,56 @@
     text-align: center;
     color: var(--color-grey-light-4);
     padding: 2.5rem;
+}
+
+
+
+///////////////////////////////////////////////////
+// GALLERY
+
+.gallery{
+
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+///////////////////////////////////////////////////
+// OVERVIEW
+
+.overview {
+
+    display: flex;
+
+    &__heading {}
+
+    &__stars {
+        margin-right: auto;
+    }
+
+    &__icon-star,
+    &__icon-location{
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__location {
+        
+    }
+
+    &__rating {}
+
+    &__rating-average {}
+
+    &__rating-count {}
+
+
+
+
 }
