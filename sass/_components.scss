@@ -274,7 +274,7 @@
 
     & span {
       margin-left: 3px;
-      transition: margin-left .2s;
+      transition: margin-left 0.2s;
     }
 
     &:hover {
@@ -386,14 +386,11 @@
   }
 }
 
-
 ////////////////////////
 /// REVIEWS
 ////////////////////////
 
-
 .review {
-
   background-color: #fff;
   box-shadow: var(--shadow-dark);
   padding: 3rem;
@@ -401,7 +398,7 @@
   position: relative;
   overflow: hidden;
 
-  &__text{
+  &__text {
     margin-bottom: 2rem;
     position: relative;
     z-index: 10;
@@ -412,10 +409,9 @@
     width: 4.5rem;
     border-radius: 50%;
     margin-right: 1.5rem;
-
   }
 
-  &__user{
+  &__user {
     display: flex;
     align-items: center;
 
@@ -436,7 +432,6 @@
     }
   }
 
-
   &__rating {
     color: var(--color-primary);
     font-size: 2.2rem;
@@ -444,7 +439,7 @@
   }
 
   &::before {
-    content : '\201C';
+    content: '\201C';
     position: absolute;
     top: -2.75rem;
     left: -1rem;
@@ -454,5 +449,75 @@
     font-size: 20rem;
     z-index: 1;
   }
+}
 
+////////////////////////
+/// CALL TO ACTION
+////////////////////////
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    text-transform: uppercase;
+
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  border: none;
+  border-radius: 100px;
+
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+
+  cursor: pointer;
+
+  color: #fff;
+
+  position: relative;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    outline: transparent;
+    animation: pulsate 1s infinite;
+  }
 }
